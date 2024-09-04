@@ -4,3 +4,4 @@ python-multipart == 0.0.9
 selenium == 4.24.0
 pandas == 2.2.2
 requests == 2.32.0
+python-dotenv == 1.0.1

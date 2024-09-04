@@ -1,11 +1,14 @@
 from fastapi import APIRouter, Form
 from .YouTubeScraper import YouTubeScraper, robo_get_video_id
 from .main import YouTubeCommentExtractor
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
 router = APIRouter()
-api_key = 'AIzaSyBfYoIco7zfu7Emv4KnSfxd9Cy4Bxx1LDI'
-file_path = 'C:/Users/gabri/OneDrive/Documentos/GitHub/csv/youtube_comments.csv'
+api_key = os.getenv('API_KEY')
+file_path = os.getenv('FILE_PATH')
 
 @router.post("/pesquisar")
 async def receber_texto(pesquisa: str = Form(...)):
