@@ -1,11 +1,18 @@
 from fastapi import APIRouter, Form
-from .main import enviar_texto
+from .YouTubeScraper import YouTubeScraper, robo_get_video_id
+from .main import YouTubeCommentExtractor
 
 
 router = APIRouter()
+api_key = 'AIzaSyBfYoIco7zfu7Emv4KnSfxd9Cy4Bxx1LDI'
+file_path = 'C:/Users/gabri/OneDrive/Documentos/GitHub/csv/youtube_comments.csv'
 
 @router.post("/pesquisar")
 async def receber_texto(pesquisa: str = Form(...)):
-    
-    # Processa o texto recebido
+    scraper = YouTubeScraper()
+
+    video_id = robo_get_video_id(pesquisa)
+
+    extractor = YouTubeCommentExtractor(api_key, video_id)
+    extractor.run(file_path)
     return {"texto_recebido": pesquisa}
