@@ -4,8 +4,8 @@ from .main import YouTubeCommentExtractor
 
 
 router = APIRouter()
-api_key = 'AIzaSyBfYoIco7zfu7Emv4KnSfxd9Cy4Bxx1LDI'
-file_path = 'C:/Users/gabri/OneDrive/Documentos/GitHub/csv/youtube_comments.csv'
+api_key = ''
+file_path = ''
 
 @router.post("/pesquisar")
 async def receber_texto(pesquisa: str = Form(...)):
