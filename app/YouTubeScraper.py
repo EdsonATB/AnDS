@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import re
 
 class YouTubeScraper:
-    def __init__(self, headless=False):
+    def __init__(self, headless=True):
         self.driver = self._initialize_driver(headless)
     
     def _initialize_driver(self, headless):
@@ -15,6 +15,7 @@ class YouTubeScraper:
             chrome_options.add_argument("--headless")
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--headless")
 
         driver = webdriver.Chrome(options=chrome_options)
         driver.maximize_window()
