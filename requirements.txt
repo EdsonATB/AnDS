@@ -5,3 +5,5 @@ selenium == 4.24.0
 pandas == 2.2.2
 requests == 2.32.0
 python-dotenv == 1.0.1
+transformers == 4.44.2
+torch == 2.4.1
