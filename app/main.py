@@ -1,7 +1,6 @@
 import requests
 import pandas as pd
 import re
-import os
 from app.YouTubeScraper import robo_get_video_id
 
 class YouTubeCommentExtractor:
@@ -29,29 +28,19 @@ class YouTubeCommentExtractor:
                 'snippet.topLevelComment.snippet.textDisplay': 'video_comment'
             }, inplace=True)
             df['video_comment'] = df['video_comment'].apply(self._clean_comment)
-            return df
+            df_list = df['video_comment']
+            return df_list.tolist()
         else:
             raise ValueError("As colunas esperadas não estão presentes nos dados.")
-
+        
     @staticmethod
     def _clean_comment(comment):
         return re.sub(r'[^\w\s]', '', comment)
 
-    def save_to_csv(self, df, file_path):
-        directory = os.path.dirname(file_path)
-        if not os.path.exists(directory):
-            os.makedirs(directory)
-        df.to_csv(file_path, index=False)
-        print(f'DataFrame salvo no arquivo: {file_path}')
-
     def run(self, file_path):
-        print("ID do vídeo:", self.video_id)
         data = self.fetch_comments()
-        print("Dados brutos:", data)
-        print("Estrutura dos dados:", data)
-        
-        df = self.process_comments(data)
-        print("DataFrame final:", df)
-        self.save_to_csv(df, file_path)
+        comments = self.process_comments(data)
+        return comments
+
 
  

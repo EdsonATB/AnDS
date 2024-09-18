@@ -17,3 +17,4 @@ async def read_index():
 
 
 #Para iniciar a api abra o terminal e digite uvicorn app.main:app --reload
+#Para iniciar a api abra o terminal e digite uvicorn app.api:app --reload
