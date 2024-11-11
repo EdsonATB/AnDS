@@ -11,18 +11,13 @@ load_dotenv()
 api_key = os.getenv('API_KEY')
 file_path = os.getenv('FILE_PATH')
 
-st.title('Comment Gauge')
+st.title('Relatório de Sentimentos dos Comentários do YouTube')
+st.write(" ")
+st.write(" ")
+left, right = st.columns(2, vertical_alignment="bottom")
 
-col1, col2 = st.columns([3, 1])	
-
-
-with col1:
-    search_text = st.text_input("Digite o tema")
-
-
-with col2:
-    search_button = st.button("Buscar", use_container_width=True)
-
+search_text = left.text_input("Digite o texto a ser pesquisado")
+search_button = right.button("Pesquisar 🔍")
 
 if search_button and search_text:
     pesquisa = search_text
