@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from main import YouTubeCommentExtractor
+from app.youtube_comment_extractor import YouTubeCommentExtractor
 from sentiment_analysis import analyze_sentiments
 from YouTubeScraper import  robo_get_video_id
 from dotenv import load_dotenv

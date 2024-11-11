@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Form
 from .YouTubeScraper import  robo_get_video_id
-from .main import YouTubeCommentExtractor
+from .youtube_comment_extractor import YouTubeCommentExtractor
 from .sentiment_analysis import analyze_sentiments
 from dotenv import load_dotenv
 import os
