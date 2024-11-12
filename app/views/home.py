@@ -32,10 +32,9 @@ st.markdown("""
 - **Pesquisar por ID**: Insira diretamente o ID do vídeo para realizar a análise.
 """)
 
-# Botão para Navegar até a Análise de Sentimentos
-# if st.button("Comece a Analisar"):
-#     st.write("🚀 Redirecionando para a página de análise...")  # Aqui, você pode adicionar o redirecionamento para a página de análise, se necessário
-#     switch_page_button("analisador")
+#Botão para Navegar até a Análise de Sentimentos
+st.write("🚀 Para começar a analisar click em 📊Analisador de Sentimentos")  # Aqui, você pode adicionar o redirecionamento para a página de análise, se necessário
+    
 # Link para a página Sobre Nós
-# st.write("---")
-# st.write("Quer saber mais sobre o projeto? [Sobre Nós](./sobre_nos)")
+st.write("---")
+st.write("Quer saber mais sobre a gente? de uma passadinha na página 📋Sobre Nós")
