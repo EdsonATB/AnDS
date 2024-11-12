@@ -22,7 +22,7 @@ def search_youtube_video_id(query, api_key):
         return None
     
 
-def get_youtube_comments(video_id, api_key, max_results=11):
+def get_youtube_comments(video_id, api_key, max_results=26):
     url = "https://www.googleapis.com/youtube/v3/commentThreads"
     params = {
         "part": "snippet",

@@ -6,6 +6,7 @@ import plotly.express as px
 from sentiment_analysis import analyze_sentiments
 from dotenv import load_dotenv
 import os
+from translatepy import Translator  # Importando a biblioteca de tradução
 
 load_dotenv()
 
@@ -52,13 +53,26 @@ elif search_button and search_text:
         if not video_id:
             st.error("Não foi possível encontrar um vídeo com a pesquisa fornecida.")
         else:
-            comments = get_youtube_comments(video_id, api_key, max_results=11)
+            comments = get_youtube_comments(video_id, api_key, max_results=26)
             
             if not comments:
                 st.error("Nenhum comentário foi extraído ou o formato dos dados está incorreto.")
             else:
-                sentiment_results = analyze_sentiments([comment['comment'] for comment in comments])
-            
+                # Traduzindo os comentários para o português
+                translator = Translator()
+                translated_comments = []
+                for comment in comments:
+                    try:
+                        translated = translator.translate(comment['comment'], 'English')
+                        translated_comments.append(translated.result)
+                    except Exception as e:
+                        print(f"Erro ao traduzir o comentário: {e}")
+                        translated_comments.append(comment['comment'])  # Se falhar, mantém o comentário original
+
+                # Realizando a análise de sentimentos nos comentários traduzidos
+                sentiment_results = analyze_sentiments(translated_comments)
+                
+                # Convertendo os resultados para DataFrame
                 df = pd.DataFrame(sentiment_results)
                 st.write("Comentários analisados:")
                 st.dataframe(df, use_container_width=True)
