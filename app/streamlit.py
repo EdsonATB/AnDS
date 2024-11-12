@@ -2,7 +2,11 @@ import streamlit as st
 
 st.set_page_config(page_title='Comment Gauge', page_icon='📊', layout='wide')
 
-
+home_page = st.Page(
+    page="views/home.py",
+    title="Home",
+    icon="🏠",
+)
 
 sobre_page = st.Page(
     page="views/sobre.py",
@@ -20,6 +24,7 @@ analisador_page = st.Page(
 
 pg = st.navigation(
     { 
+        "Home": [home_page],
         "Analisador de Sentimentos": [analisador_page],
         "Sobre Nós": [sobre_page],
     }
