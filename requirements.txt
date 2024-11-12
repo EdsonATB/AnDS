@@ -8,3 +8,5 @@ python-dotenv == 1.0.1
 transformers == 4.44.2
 torch == 2.4.1
 streamlit == 1.39.0
+matplotlib 
+plotly
