@@ -1,6 +1,6 @@
 import streamlit as st
 from PIL import Image
-from streamlit_extras import switch_page_button
+
 
 # Título e subtítulo com emojis
 st.title("🎉 Comment Gauge 🎉")
