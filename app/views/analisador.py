@@ -30,22 +30,8 @@ if radio_buton == "Pesquisar por id":
 
 search_button = right.button("Pesquisar 🔍")
 
-# Criar um DataFrame vazio com 10 linhas de dados fictícios
-empty_data = {
-    "text": [" "]*10,
-    "sentiment": [" "]*10,
-    "confidence": [" "]*10
-}
-
-empty_df = pd.DataFrame(empty_data)
-
-# Exibir DataFrame vazio com 10 linhas de exemplo caso não haja pesquisa
-if not search_text:
-    st.write("Comentários analisados:")
-    st.dataframe(empty_df, use_container_width=True)
-
 # Pesquisa o texto digitado e exibe os comentários e análises de sentimentos
-elif search_button and search_text:
+if search_button and search_text:
     with st.spinner('Aguarde, estamos buscando os comentários...'):
 
             if radio_buton == "Pesquisar por nome":
