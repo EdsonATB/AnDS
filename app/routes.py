@@ -5,6 +5,7 @@ from .sentiment_analysis import analyze_sentiments
 from dotenv import load_dotenv
 import os
 
+
 load_dotenv()
 
 router = APIRouter()

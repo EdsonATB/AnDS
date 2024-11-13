@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página com Requisição POST</title>
+    <title>Teste</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Minha Página</h1>
-
-    <!-- Formulário que faz a requisição POST -->
-    <form action="/pesquisar" method="POST">
-        <input type="text" name="pesquisa" placeholder="Digite aqui">
-        <button type="submit">Pesquisar</button>
-    </form>
+    <div class="container">
+        <h1>Pesquise algo</h1>
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Digite sua pesquisa" required>
+            <button type="submit">Pesquisar</button>
+        </form>
+        <div id="result">
+            <!-- Resultados da API -->
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
