@@ -6,10 +6,21 @@ from textwrap import wrap
 def gerar_pdf(df, video_url, sentiment_counts):
     buffer = BytesIO()
     c = canvas.Canvas(buffer, pagesize=letter)
-    c.setFont("Helvetica", 12)
+    
+    # Configuração da página
+    page_width, page_height = letter  # Dimensões da página
 
-    # Título e URL do vídeo
-    c.drawString(100, 750, "Relatório de Sentimentos dos Comentários do YouTube")
+    # Título em negrito e centralizado
+    title = "Relatório de Sentimentos dos Comentários do YouTube"
+    c.setFont("Helvetica-Bold", 16)  # Fonte em negrito e tamanho maior para o título
+
+    # Calcula a posição x para centralizar o título
+    title_width = c.stringWidth(title, "Helvetica-Bold", 16)
+    title_x = (page_width - title_width) / 2
+    c.drawString(title_x, 750, title)  # Centralizado horizontalmente na posição vertical 750
+
+    # Fonte para o restante do documento
+    c.setFont("Helvetica", 12)
     c.drawString(100, 730, f"Vídeo Analisado: {video_url}")
 
     # Contagem de sentimentos
@@ -24,8 +35,8 @@ def gerar_pdf(df, video_url, sentiment_counts):
     y_position -= 40
     c.setFont("Helvetica-Bold", 10)
     c.drawString(100, y_position, "Comentário")
-    c.drawString(350, y_position, "Sentimento")
-    c.drawString(500, y_position, "Confiança")
+    c.drawString(350, y_position, "Sentimento")  # Espaçamento maior para a coluna "Sentimento"
+    c.drawString(500, y_position, "Confiança")   # Espaçamento maior para a coluna "Confiança"
 
     # Ajuste de espaçamento e fonte para o conteúdo da tabela
     y_position -= 20
@@ -44,7 +55,7 @@ def gerar_pdf(df, video_url, sentiment_counts):
             y_position = 750  # Reinicia a posição vertical no topo da nova página
 
         # Quebrar o texto do comentário em linhas, se for muito longo
-        comment_lines = wrap_text(row['text'], 60)  # Ajuste o valor conforme necessário para caber na largura da página
+        comment_lines = wrap_text(row['text'], 40)  # Ajustado para maior espaçamento
         sentiment = row['sentiment']
 
         # Converte 'confidence' para float e formata, se possível; caso contrário, exibe como string
@@ -59,8 +70,8 @@ def gerar_pdf(df, video_url, sentiment_counts):
             y_position -= 10
 
         # Exibe o sentimento e a confiança na mesma linha
-        c.drawString(350, y_position + 10, sentiment)
-        c.drawString(500, y_position + 10, confidence)
+        c.drawString(350, y_position + 10, sentiment)  # Maior espaçamento para a coluna "Sentimento"
+        c.drawString(500, y_position + 10, confidence) # Maior espaçamento para a coluna "Confiança"
         y_position -= 15
 
     # Salvar e retornar o buffer do PDF

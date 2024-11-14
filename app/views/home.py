@@ -1,9 +1,6 @@
 import streamlit as st
 from PIL import Image
 
-# Carregar imagem ou banner ilustrativo (substitua pelo caminho da imagem desejada)
-# image = Image.open("caminho/para/sua/imagem.jpg")
-# st.image(image, use_column_width=True)
 
 # Título e subtítulo com emojis
 st.title("🎉 Comment Gauge 🎉")
