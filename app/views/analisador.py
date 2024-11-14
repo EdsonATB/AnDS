@@ -14,13 +14,14 @@ load_dotenv()
 api_key = os.getenv('API_KEY')
 file_path = os.getenv('FILE_PATH')
 
+
 st.title('Relatório de Sentimentos dos Comentários do YouTube')
 st.write(" ")
 st.write(" ")
 left, right, radio_btn = st.columns(3, vertical_alignment="bottom")
 
 radio_buton = radio_btn.radio("Escolha uma opção", ["Pesquisar por nome", "Pesquisar por id"],
-                              help="Onde conseguir o id do video ? O ID do vídeo é a sequência de caracteres depois de v= no link do vídeo no YouTube. Por exemplo, no link https://www.youtube.com/watch?v=abc123, abc123 é o ID do vídeo.")
+                            help="Onde conseguir o id do video ? O ID do vídeo é a sequência de caracteres depois de v= no link do vídeo no YouTube. Por exemplo, no link https://www.youtube.com/watch?v=abc123, abc123 é o ID do vídeo.")
 
 if radio_buton == "Pesquisar por nome":
     search_text = left.text_input("Digite o texto a ser pesquisado")
@@ -31,7 +32,7 @@ if radio_buton == "Pesquisar por id":
 search_button = right.button("Pesquisar 🔍")
 
 # Pesquisa o texto digitado e exibe os comentários e análises de sentimentos
-if search_button and search_text:
+if search_button or search_text:
     with st.spinner('Aguarde, estamos buscando os comentários...'):
 
             if radio_buton == "Pesquisar por nome":

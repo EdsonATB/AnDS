@@ -32,6 +32,8 @@ pg = st.navigation(
 
 st.sidebar.text('Desenvolvido por alunos de ti 🤓')
 
+
+
 pg.run()
 
 #python -m streamlit run app\streamlit.py use este comando para rodar o streamlit
