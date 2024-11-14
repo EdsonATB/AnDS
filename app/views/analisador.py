@@ -118,10 +118,19 @@ if search_button or search_text:
                             title_font=dict(size=15, color='white')  # Título em branco
                         )
                         st.plotly_chart(fig_pie)
+                email, dowload = st.columns(2, vertical_alignment="bottom")
+                
+                @st.dialog("Enviar Relatório por E-mail 📧")
+                def email_dialog():
+                    st.text_input("Digite o e-mail para envio do relatório")
+                    
 
+
+                if st.button("Enviar Relatório por E-mail 📧"):
+                    email_dialog()
                 # Disponibilizar o PDF para download
                 pdf_buf = gerar_pdf(df, video_url_used, sentiment_counts)
-                st.download_button(
+                dowload = st.download_button(
                     label="Baixar Relatório em PDF",
                     data=pdf_buf,
                     file_name="relatorio_sentimentos_youtube.pdf",
