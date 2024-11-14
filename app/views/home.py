@@ -76,12 +76,14 @@ with tab2:
     """)
 
     # Adicionando uma imagem de exemplo ou gráfico (opcional)
-    image_sentiment_llm = Image.open(r"/home/dev/Dev/AnDS/app/logo/image_sentiment_analisys.png")
+    # image_sentiment_llm = Image.open(r"/home/dev/Dev/AnDS/app/logo/image_sentiment_analisys.png")
+    image_sentiment_llm = Image.open("app/logo/image_sentiment_analisys.png")
     st.image(image_sentiment_llm, caption="Exemplo de como a análise de sentimento e feita", use_column_width=True)
 
     # Seção de Exemplo de Vídeo
     st.header("📹 Exemplo de Análise de Sentimentos")
-    video_file = open(r"/home/dev/Dev/AnDS/app/midia/streamlit_video_txt.mp4", "rb")
+    # video_file = open(r"/home/dev/Dev/AnDS/app/midia/streamlit_video_txt.mp4", "rb")
+    video_file = open("app/midia/streamlit_video_txt.mp4", "rb")
     video_bytes = video_file.read()
     st.video(video_bytes)
     st.write("""

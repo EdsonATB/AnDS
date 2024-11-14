@@ -7,7 +7,7 @@ from sentiment_analysis import analyze_sentiments
 from dotenv import load_dotenv
 import os
 from translatepy import Translator
-from views.gerar_pdf import gerar_pdf #, resumo_sentimentos_ai
+from views.gerar_pdf import gerar_pdf
 
 load_dotenv()
 
@@ -48,7 +48,7 @@ if search_button or search_text:
                     st.error("Não foi possível encontrar um vídeo com o id fornecido.")
 
 
-            comments = get_youtube_comments(video_id, api_key, max_results=26)
+            comments = get_youtube_comments(video_id, api_key, max_results=5)
             
             if not comments:
                 st.error("Não foi possível encontrar um vídeo com o id fornecido.")
@@ -118,12 +118,6 @@ if search_button or search_text:
                             title_font=dict(size=15, color='white')  # Título em branco
                         )
                         st.plotly_chart(fig_pie)
-            
-                # Primeiro, obtenha o resumo da IA
-                #comentarios_resumidos = resumo_sentimentos_ai(comments)
-
-                # Em seguida, passe o resumo para a função gerar_pdf
-                #pdf_buf = gerar_pdf(df, video_url_used, sentiment_counts, comentarios_resumidos)
 
                 # Disponibilizar o PDF para download
                 pdf_buf = gerar_pdf(df, video_url_used, sentiment_counts)
