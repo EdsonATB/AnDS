@@ -7,7 +7,7 @@ from sentiment_analysis import analyze_sentiments
 from dotenv import load_dotenv
 import os
 from translatepy import Translator
-from views.gerar_pdf import gerar_pdf
+from views.gerar_pdf import gerar_pdf #, resumo_sentimentos_ai
 
 load_dotenv()
 
@@ -119,6 +119,12 @@ if search_button or search_text:
                         )
                         st.plotly_chart(fig_pie)
             
+                # Primeiro, obtenha o resumo da IA
+                #comentarios_resumidos = resumo_sentimentos_ai(comments)
+
+                # Em seguida, passe o resumo para a função gerar_pdf
+                #pdf_buf = gerar_pdf(df, video_url_used, sentiment_counts, comentarios_resumidos)
+
                 # Disponibilizar o PDF para download
                 pdf_buf = gerar_pdf(df, video_url_used, sentiment_counts)
                 st.download_button(
