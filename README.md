@@ -56,19 +56,6 @@ AnDS-ANDS-Streamlit/
 
 3. **Configuração**: Após que as dependências do  `requirements.tx`forem instaladas certifique-se de definir variáveis de ambiente (ex. `API_KEY`) no arquivo `.env` para acessar a API do YouTube.
 
-**Template do arquivo .env**
-```
-#CHAVE DA API DO YOUTUBE
-API_KEY=''
-
-#Senha do email
-SENHA_EMAIL=''
-
-obs: A senha do email funciona melhor com uma senha de aplicativo que pode ser configurada na conta do google do usuario.
-
-Caso esteja com dificuldades consulte este link: https://atendimento.tecnospeed.com.br/hc/pt-br/articles/4418115119127-Como-criar-senha-de-aplicativo-para-email
-```
-
 ## Instalação
 
 Para usar o **Comment Gauge**, siga os passos abaixo:
@@ -84,7 +71,23 @@ Para acessar a API do YouTube, você precisa de uma chave de API. Siga os passos
 - Crie um projeto e habilite a **YouTube Data API v3**.
 - Gere uma chave de API e adicione-a ao arquivo de configuração do projeto.
 
-### 3. Rodar o projeto
+### 3. Configurar o env
+- Substitua com suas credenciais.
+
+**Template do arquivo .env**
+```
+#CHAVE DA API DO YOUTUBE
+API_KEY=''
+
+#Senha do email
+SENHA_EMAIL=''
+
+obs: A senha do email funciona melhor com uma senha de aplicativo que pode ser configurada na conta do google do usuario.
+
+Caso esteja com dificuldades consulte este link: https://atendimento.tecnospeed.com.br/hc/pt-br/articles/4418115119127-Como-criar-senha-de-aplicativo-para-email
+```
+
+### 4. Rodar o projeto
 Para rodar o projeto, use o seguinte comando:
 ```bash
 python -m streamlit run app\streamlit.py
