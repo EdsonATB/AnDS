@@ -1,7 +1,7 @@
 from io import BytesIO
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
 from textwrap import wrap
+from reportlab.pdfgen import canvas
+from reportlab.lib.pagesizes import letter
 
 def gerar_pdf(df, video_url, sentiment_counts):
     buffer = BytesIO()
