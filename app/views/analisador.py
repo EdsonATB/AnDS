@@ -48,7 +48,7 @@ if search_button or search_text:
                     st.error("Não foi possível encontrar um vídeo com o id fornecido.")
 
 
-            comments = get_youtube_comments(video_id, api_key, max_results=50)
+            comments = get_youtube_comments(video_id, api_key, max_results=30)
             
             if not comments:
                 st.error("Não foi possível encontrar um vídeo com o id fornecido.")
