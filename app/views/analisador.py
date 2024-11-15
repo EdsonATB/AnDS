@@ -1,19 +1,19 @@
-import streamlit as st
-import pandas as pd
-from YouTubeScraper import search_youtube_video_id, get_youtube_comments
-import matplotlib.pyplot as plt
-import plotly.express as px
-from sentiment_analysis import analyze_sentiments
-from dotenv import load_dotenv
 import os
+import re
+import pandas as pd
+import streamlit as st
+import plotly.express as px
+from dotenv import load_dotenv
+import matplotlib.pyplot as plt
 from translatepy import Translator
-from views.gerar_pdf import gerar_pdf
+from enviar_email import enviar_email
+from app.gerar_pdf import gerar_pdf
+from sentiment_analysis import analyze_sentiments
+from YouTubeScraper import search_youtube_video_id, get_youtube_comments
 
 load_dotenv()
 
 api_key = os.getenv('API_KEY')
-file_path = os.getenv('FILE_PATH')
-
 
 st.title('Relatório de Sentimentos dos Comentários do YouTube')
 st.write(" ")
@@ -48,7 +48,7 @@ if search_button or search_text:
                     st.error("Não foi possível encontrar um vídeo com o id fornecido.")
 
 
-            comments = get_youtube_comments(video_id, api_key, max_results=5)
+            comments = get_youtube_comments(video_id, api_key, max_results=50)
             
             if not comments:
                 st.error("Não foi possível encontrar um vídeo com o id fornecido.")
@@ -120,16 +120,27 @@ if search_button or search_text:
                         st.plotly_chart(fig_pie)
                 email, dowload = st.columns(2, vertical_alignment="bottom")
                 
+                pdf_buf = gerar_pdf(df, video_url_used, sentiment_counts)
+                
                 @st.dialog("Enviar Relatório por E-mail 📧")
                 def email_dialog():
-                    st.text_input("Digite o e-mail para envio do relatório")
-                    
+                    with st.form("Envio de formulario por email"):
+                        email = st.text_input("Digite o e-mail para envio do relatório")
+                        submit_button = st.form_submit_button("Enviar")
+                        if submit_button:
+                            padrao_email = r'^[\w\.-]+@[\w\.-]+\.\w+$'  # Regex que valida um e-mail
 
+                            if re.match(padrao_email, email):
+                                enviar_email(email, pdf_buf)  # Corrigido: passando o argumento necessário
+                                st.success("E-mail enviado com sucesso!")
+                            else:
+                                st.error("E-mail inválido. Por favor, insira um e-mail válido.")
 
-                if st.button("Enviar Relatório por E-mail 📧"):
+                email_button = email.button("Enviar Relatório por E-mail 📧")
+                if email_button:
                     email_dialog()
+                
                 # Disponibilizar o PDF para download
-                pdf_buf = gerar_pdf(df, video_url_used, sentiment_counts)
                 dowload = st.download_button(
                     label="Baixar Relatório em PDF",
                     data=pdf_buf,
