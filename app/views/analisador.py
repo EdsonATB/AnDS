@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 import matplotlib.pyplot as plt
 from translatepy import Translator
 from enviar_email import enviar_email
-from app.gerar_pdf import gerar_pdf
+from gerar_pdf import gerar_pdf
 from sentiment_analysis import analyze_sentiments
 from YouTubeScraper import search_youtube_video_id, get_youtube_comments
 
