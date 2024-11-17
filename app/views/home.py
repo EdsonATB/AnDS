@@ -132,17 +132,41 @@ with tab2:
     O uso de LLMs possibilita análises de sentimentos precisas e detalhadas, identificando nuances e tendências nos comentários dos vídeos do YouTube. Isso significa que você terá informações confiáveis e insights valiosos para ajustar suas estratégias de conteúdo, baseados em dados reais e atualizados.
     """)
 
-    # Botão para Navegar até a Análise de Sentimentos
-    st.write("🚀 Pronto para começar a descobrir o que o público pensa sobre um vídeo específico? Clique no botão abaixo para acessar o Analisador de Sentimentos e iniciar a sua análise!")
-    if st.button("📊 Analisador de Sentimentos"):
-        # Aqui você pode adicionar a lógica para redirecionar o usuário à página de análise
-        st.write("Redirecionando para o Analisador de Sentimentos...")
 with tab3:
-    # Link para a página Sobre Nós
-    st.write("---")
-    st.write("👥 Quer saber mais sobre a gente? Dê uma passadinha na página **📋 Sobre Nós**, onde você encontrará mais informações sobre nossa missão, equipe e valores.")
+    st.title("🎉 Sobre o Projeto Comment Gauge 🎉")
+    st.markdown("""
+    ## Bem-vindo ao Comment Gauge! 🌟
 
-    # Seção de Rodapé com Contato e Links Importantes
-    st.write("---")
-    st.write("📧 Entre em contato: **contato@commentgauge.com**")
-    st.write("🔗 Siga-nos nas redes sociais para mais atualizações e dicas: [LinkedIn](#) ")
+    O **Comment Gauge** é uma ferramenta inteligente de análise de sentimentos focada em comentários do YouTube! Queremos ajudar você a entender a vibe geral da galera sobre qualquer assunto 🤔. Seja você criador de conteúdo, pesquisador ou parte de uma marca, temos insights valiosos para você! 📊💡
+
+    ### Nossa Missão 🚀
+    Facilitar a análise de comentários para que você possa entender o que as pessoas realmente estão dizendo — e sentindo! 😊😠😐
+
+    ### Nossa Equipe 🧑‍💻👩‍💻
+    O Comment Gauge foi desenvolvido como parte de um projeto universitário na disciplina de **Project Labs**. Nossa equipe é composta por estudantes dedicados que compartilham a paixão por tecnologia e análise de dados:
+
+    - **Gabriel Cruz**  
+    [GitHub](https://github.com/gabrielcruz) | [LinkedIn](https://linkedin.com/in/gabrielcruz)
+    - **Edson Augusto**  
+    [GitHub](https://github.com/edsonaugusto) | [LinkedIn](https://linkedin.com/in/edsonaugusto)
+    - **Jefferson Andrade**  
+    [GitHub](https://github.com/jeffersonandrade) | [LinkedIn](https://linkedin.com/in/jeffersonandrade)
+    - **Daniel Queiroz**  
+    [GitHub](https://github.com/danielqueiroz) | [LinkedIn](https://linkedin.com/in/danielqueiroz)
+    - **Lucas Silva**  
+    [GitHub](https://github.com/lucassilva) | [LinkedIn](https://linkedin.com/in/lucassilva)
+    - **Victoria Cardoso**  
+    [GitHub](https://github.com/victoriacardoso) | [LinkedIn](https://linkedin.com/in/victoriacardoso)
+    - **Matheus Maranhão**  
+    [GitHub](https://github.com/matheusmaranhao) | [LinkedIn](https://linkedin.com/in/matheusmaranhao)
+    - **Ikaro Petrônio**  
+    [GitHub](https://github.com/ikaropetronio) | [LinkedIn](https://linkedin.com/in/ikaropetronio)
+
+    Acreditamos no poder da análise de sentimentos para transformar opiniões em insights acionáveis! 💬❤️
+
+    ### Fale Conosco 📬
+    Ficou curioso? Quer bater um papo? Estamos aqui! 😉
+    - **GitHub**: (https://github.com/NxtTon/AnDS/tree/ANDS-Streamlit-API) 🚀
+
+    Esperamos que você curta o Comment Gauge tanto quanto curtimos desenvolvê-lo! Vamos juntos explorar os sentimentos da internet! 🌐❤️
+    """)

@@ -8,13 +8,6 @@ home_page = st.Page(
     icon="🏠",
 )
 
-sobre_page = st.Page(
-    page="views/sobre.py",
-    title="Sobre Nós",
-    icon="📋",
-
-)
-
 analisador_page = st.Page(
     page="views/analisador.py",
     title="Analisador de Sentimentos",
@@ -26,7 +19,6 @@ pg = st.navigation(
     { 
         "Home": [home_page],
         "Analisador de Sentimentos": [analisador_page],
-        "Sobre Nós": [sobre_page],
     }
 )
 
