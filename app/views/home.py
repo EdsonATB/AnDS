@@ -133,7 +133,7 @@ with tab2:
     """)
 
 with tab3:
-    st.title("🎉 Sobre o Projeto Comment Gauge 🎉")
+    st.title("🎉 Sobre o Projeto Comment Gauge 🎉") 
     st.markdown("""
     ## Bem-vindo ao Comment Gauge! 🌟
 
