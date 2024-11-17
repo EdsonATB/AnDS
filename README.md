@@ -3,27 +3,40 @@
 
 ## Descrição
 
-Este projeto é uma aplicação para análise de sentimentos em comentários do YouTube, desenvolvida usando FastAPI e Streamlit. Ele extrai comentários de vídeos do YouTube e usa modelos de aprendizado de máquina para identificar o sentimento dos textos (positivo, neutro ou negativo). O projeto também oferece uma interface interativa com Streamlit para visualização dos resultados.
+Comment Gauge é uma ferramenta de análise de sentimentos focada em comentários de YouTube. Com ela, é possível extrair comentários, analisar o sentimento por meio de processamento de linguagem natural (NLP) e visualizar dados de forma eficaz. Essa ferramenta é destinada a criadores de conteúdo, pesquisadores e marcas que buscam insights sobre a opinião pública.
+
+## Tecnologias Utilizadas
+
+- **Streamlit** - Para visualização interativa de dados.
+- **YouTube Data API v3** - Para coleta de dados.
+- **Transformers (Hugging Face)** - Para análise de sentimentos.
+- **Torch** - Framework de aprendizado de máquina.
+- **Bibliotecas:** - `yagmail`, `matplotlib`, `pandas`, `nltk`, `scikit-learn`
 
 ## Funcionalidades
 
-- **Extração de Comentários**: Utiliza o Selenium para coletar comentários de vídeos do YouTube.
+- **Extração de Comentários**: Permite a extração de comentários de vídeos do YouTube usando a API do YouTube.
 - **Análise de Sentimentos**: Aplica um modelo de análise de sentimentos (usando a biblioteca Hugging Face Transformers).
 - **Interface Interativa**: Interface desenvolvida em Streamlit para visualização dos dados e interação com o usuário.
-- **FastAPI**: Endpoint de API para execução de tarefas de extração e análise.
+- **Visualização de Dados**: Gera gráficos e relatórios para facilitar a compreensão das opiniões dos usuários.
 
 ## Estrutura do Projeto
 
 ```plaintext
 AnDS-ANDS-Streamlit/
 ├── app/
-│   ├── YouTubeScraper.py         # Módulo para extração de comentários do YouTube
-│   ├── sentiment_analysis.py     # Funções para análise de sentimentos
-│   ├── streamlit.py              # Script principal para a interface Streamlit
-│   ├── api.py                    # Configuração de rotas e FastAPI
-│   └── routes.py                 # Rotas específicas para as funcionalidades da API
-├── requirements.txt              # Dependências do projeto
-└── README.md                     # Documentação do projeto
+│   ├── logo/
+│   │     ├── Ands_logo.png                      # imagem ultilizada no projeto
+│   │     └── image_sentiment_analisys.png       # imagem ultilizada no projeto
+│   ├── midia/
+│   │     └── streamlit_video_txt.mp4            # Video ultilizado no projeto
+│   ├── enviar_email.py                          # Função para enviar email com o pdf
+│   ├── gerar_pdf.py                             # Função para gerar o pdf a partir dos comentários
+│   ├── sentiment_analysis.py                    # Funções para análise de sentimentos
+│   ├── streamlit.py                             # Script principal para a interface Streamlit
+│   └── YouTubeScraper.py                        # Módulo para extração de comentários do YouTube  
+├── requirements.txt                             # Dependências do projeto
+└── README.md                                    # Documentação do projeto
 ```
 
 ## Requisitos
@@ -36,25 +49,49 @@ AnDS-ANDS-Streamlit/
 
 ## Como Executar
 
-1. **API com FastAPI**: Para iniciar o servidor FastAPI, execute:
-   ```bash
-   uvicorn app.api:app --reload
-   ```
-
-2. **Interface com Streamlit**: Para iniciar a aplicação Streamlit:
+1. **Interface com Streamlit**: Para iniciar a aplicação Streamlit:
    ```bash
    streamlit run app/streamlit.py
    ```
 
-3. **Configuração**: Certifique-se de definir variáveis de ambiente (ex. `API_KEY`) no arquivo `.env` para acessar a API do YouTube.
+3. **Configuração**: Após que as dependências do  `requirements.tx`forem instaladas certifique-se de definir variáveis de ambiente (ex. `API_KEY`) no arquivo `.env` para acessar a API do YouTube.
 
-## Tecnologias Utilizadas
+## Instalação
 
-- **FastAPI** - Para criação de API.
-- **Streamlit** - Para visualização interativa de dados.
-- **Selenium** - Para automação e coleta de dados.
-- **Transformers (Hugging Face)** - Para análise de sentimentos.
-- **Torch** - Framework de aprendizado de máquina.
+Para usar o **Comment Gauge**, siga os passos abaixo:
+
+### 1. Clonar o repositório
+
+```bash
+git clone https://github.com/NxtTon/AnDS.git
+```
+### 2. Configuração do YouTube API
+Para acessar a API do YouTube, você precisa de uma chave de API. Siga os passos abaixo para obter uma chave:
+- Acesse Google Cloud Console.
+- Crie um projeto e habilite a **YouTube Data API v3**.
+- Gere uma chave de API e adicione-a ao arquivo de configuração do projeto.
+
+### 3. Configurar o env
+- Substitua com suas credenciais.
+
+**Template do arquivo .env**
+```
+#CHAVE DA API DO YOUTUBE
+API_KEY=''
+
+#Senha do email
+SENHA_EMAIL=''
+
+obs: A senha do email funciona melhor com uma senha de aplicativo que pode ser configurada na conta do google do usuario.
+
+Caso esteja com dificuldades consulte este link: https://atendimento.tecnospeed.com.br/hc/pt-br/articles/4418115119127-Como-criar-senha-de-aplicativo-para-email
+```
+
+### 4. Rodar o projeto
+Para rodar o projeto, use o seguinte comando:
+```bash
+python -m streamlit run app\streamlit.py
+```
 
 ## Contribuição
 
