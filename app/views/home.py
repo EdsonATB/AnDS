@@ -148,7 +148,7 @@ with tab3:
     - **Gabriel Cruz**  
     [GitHub](https://github.com/NxtTon) | [LinkedIn](https://www.linkedin.com/in/gabriel-cruz-711273292)
     - **Edson Augusto**  
-    [GitHub](https://github.com/EdsonATB) | [LinkedIn]()
+    [GitHub](https://github.com/EdsonATB) | [LinkedIn](https://www.linkedin.com/in/edson-augusto-999a7a253/)
     - **Jefferson Andrade**  
     [GitHub]() | [LinkedIn]()
     - **Daniel Queiroz**  
