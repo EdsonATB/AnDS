@@ -146,21 +146,23 @@ with tab3:
     O Comment Gauge foi desenvolvido como parte de um projeto universitário na disciplina de **Project Labs**. Nossa equipe é composta por estudantes dedicados que compartilham a paixão por tecnologia e análise de dados:
 
     - **Gabriel Cruz**  
-    [GitHub](https://github.com/gabrielcruz) | [LinkedIn](https://linkedin.com/in/gabrielcruz)
+    [GitHub](https://github.com/NxtTon) | [LinkedIn](https://www.linkedin.com/in/gabriel-cruz-711273292)
     - **Edson Augusto**  
-    [GitHub](https://github.com/edsonaugusto) | [LinkedIn](https://linkedin.com/in/edsonaugusto)
+    [GitHub](https://github.com/EdsonATB) | [LinkedIn]()
     - **Jefferson Andrade**  
-    [GitHub](https://github.com/jeffersonandrade) | [LinkedIn](https://linkedin.com/in/jeffersonandrade)
+    [GitHub]() | [LinkedIn]()
     - **Daniel Queiroz**  
-    [GitHub](https://github.com/danielqueiroz) | [LinkedIn](https://linkedin.com/in/danielqueiroz)
+    [GitHub](https://github.com/Ywinqvn) | [LinkedIn]()
+    - **Davi Oliveira**  
+    [GitHub](https://github.com/Nyirr) | [LinkedIn]()
     - **Lucas Silva**  
-    [GitHub](https://github.com/lucassilva) | [LinkedIn](https://linkedin.com/in/lucassilva)
+    [GitHub]() | [LinkedIn]()
     - **Victoria Cardoso**  
-    [GitHub](https://github.com/victoriacardoso) | [LinkedIn](https://linkedin.com/in/victoriacardoso)
+    [GitHub]() | [LinkedIn](https://linkedin.com/in/victoriacardoso)
     - **Matheus Maranhão**  
-    [GitHub](https://github.com/matheusmaranhao) | [LinkedIn](https://linkedin.com/in/matheusmaranhao)
+    [GitHub](github.com/mateusmaranhao12) | [LinkedIn](https://www.linkedin.com/in/mateus-maranh%C3%A3o-24938b230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
     - **Ikaro Petrônio**  
-    [GitHub](https://github.com/ikaropetronio) | [LinkedIn](https://linkedin.com/in/ikaropetronio)
+    [GitHub]() | [LinkedIn]()
 
     Acreditamos no poder da análise de sentimentos para transformar opiniões em insights acionáveis! 💬❤️
 
