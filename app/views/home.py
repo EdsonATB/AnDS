@@ -160,7 +160,7 @@ with tab3:
     - **Victoria Cardoso**  
     [GitHub]() | [LinkedIn](https://linkedin.com/in/victoriacardoso)
     - **Matheus Maranhão**  
-    [GitHub](github.com/mateusmaranhao12) | [LinkedIn](https://www.linkedin.com/in/mateus-maranh%C3%A3o-24938b230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
+    [GitHub](https://github.com/mateusmaranhao12) | [LinkedIn](https://www.linkedin.com/in/mateus-maranh%C3%A3o-24938b230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
     - **Ikaro Petrônio**  
     [GitHub]() | [LinkedIn]()
 
