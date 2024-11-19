@@ -150,19 +150,19 @@ with tab3:
     - **Edson Augusto**  
     [GitHub](https://github.com/EdsonATB) | [LinkedIn](https://www.linkedin.com/in/edson-augusto-999a7a253/)
     - **Jefferson Andrade**  
-    [GitHub]() | [LinkedIn]()
+    [GitHub](https://github.com/Jeff-Andrade) | [LinkedIn](https://www.linkedin.com/in/jefferson-andrade-429947281)
     - **Daniel Queiroz**  
-    [GitHub](https://github.com/Ywinqvn) | [LinkedIn]()
+    [GitHub](https://github.com/Ywinqvn) 
     - **Davi Oliveira**  
-    [GitHub](https://github.com/Nyirr) | [LinkedIn]()
+    [GitHub](https://github.com/Nyirr) 
     - **Lucas Silva**  
-    [GitHub]() | [LinkedIn]()
+    [GitHub](https://github.com/LSilvaAraujo) | [LinkedIn](https://www.linkedin.com/in/lucassilvadearaujo9/)
     - **Victoria Cardoso**  
-    [GitHub]() | [LinkedIn](https://linkedin.com/in/victoriacardoso)
+    [LinkedIn](https://www.linkedin.com/in/victoria-cardoso-chaves-leite/)
     - **Matheus Maranhão**  
     [GitHub](https://github.com/mateusmaranhao12) | [LinkedIn](https://www.linkedin.com/in/mateus-maranh%C3%A3o-24938b230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
     - **Ikaro Petrônio**  
-    [GitHub]() | [LinkedIn]()
+    [GitHub](https://github.com/ikaroPetronio) | [LinkedIn](https://www.linkedin.com/in/ikaropetroniorocha/)
 
     Acreditamos no poder da análise de sentimentos para transformar opiniões em insights acionáveis! 💬❤️
 
