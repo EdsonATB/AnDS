@@ -146,7 +146,7 @@ with tab3:
     O Comment Gauge foi desenvolvido como parte de um projeto universitário na disciplina de **Project Labs**. Nossa equipe é composta por estudantes dedicados que compartilham a paixão por tecnologia e análise de dados:
 
     - **Gabriel Cruz**  
-    [GitHub](https://github.com/NxtTon) | [LinkedIn](https://www.linkedin.com/in/gabriel-cruz-711273292)
+    [GitHub](https://github.com/Gabriel-Cruz-Araujo) | [LinkedIn](https://www.linkedin.com/in/gabriel-cruz-711273292)
     - **Edson Augusto**  
     [GitHub](https://github.com/EdsonATB) | [LinkedIn](https://www.linkedin.com/in/edson-augusto-999a7a253/)
     - **Jefferson Andrade**  
